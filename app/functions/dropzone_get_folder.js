@@ -24,7 +24,7 @@ function dropzone_get_folder (config, slug) {
     if (!fs.existsSync(img_cat_folder)) { fs.mkdirSync(img_cat_folder); }
   }
   return {
-    folder  : img_cat_folder,
+    folder  :   img_cat_folder,
     slug    :   slug
   };
 

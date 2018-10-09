@@ -15,7 +15,10 @@ function build_nested_pages (pages) {
       result.unshift(pages[i]);
     }
   }
-
+  // Sort according to meta
+  result = result.sort(function(a,b){
+      return a.sort - b.sort;
+  });
   return result;
 }
 
