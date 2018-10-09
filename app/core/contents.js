@@ -19,8 +19,7 @@ function handler (activePageSlug, config) {
   const files = glob.sync(contentDir + '**/*');
   const content_dir = path.normalize(contentDir);
   const filesProcessed = [];
-console.log(activePageSlug)
-console.log(baseSlug)
+
   filesProcessed.push({
     slug: '.',
     title: '',
@@ -72,9 +71,7 @@ console.log(baseSlug)
           }
         }
       }
-console.log(shortPath)
-console.log(activePageSlug)
-console.log(fileSlug)
+
       filesProcessed.push({
         slug: shortPath,
         title: dirMetadata.title || _s.titleize(_s.humanize(path.basename(shortPath))),
@@ -86,7 +83,6 @@ console.log(fileSlug)
         sort: dirMetadata.sort || sort,
         files: []
       });
-      console.log(filesProcessed[filesProcessed.length-1])
 
     }
 
